@@ -34,6 +34,9 @@ class LeagueActivity : AppCompatActivity() {
     fun onMensClicked(view: View) {
         womensLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
+        mensLeagueBtn.isEnabled = false
+        womensLeagueBtn.isEnabled = true
+        coedLeagueBtn.isEnabled = true
 
         player.league = "mens"
     }
@@ -41,6 +44,9 @@ class LeagueActivity : AppCompatActivity() {
     fun onWomensClicked(view: View) {
         mensLeagueBtn.isChecked = false
         coedLeagueBtn.isChecked = false
+        mensLeagueBtn.isEnabled = true
+        womensLeagueBtn.isEnabled = false
+        coedLeagueBtn.isEnabled = true
 
         player.league = "womens"
     }
@@ -48,6 +54,9 @@ class LeagueActivity : AppCompatActivity() {
     fun onCoedClicked(view: View) {
         mensLeagueBtn.isChecked = false
         womensLeagueBtn.isChecked = false
+        mensLeagueBtn.isEnabled = true
+        womensLeagueBtn.isEnabled = true
+        coedLeagueBtn.isEnabled = false
 
         player.league = "co-ed"
     }
